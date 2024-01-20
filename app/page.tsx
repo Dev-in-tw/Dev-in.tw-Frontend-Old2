@@ -1,95 +1,59 @@
-import Image from "next/image";
+
 import styles from "./page.module.css";
+
+// Lib
+import joinClassName from "@/app/lib/joinClassName";
+
+// Component
+import ArrowDown from "@/app/components/icons/arrowDown";
+import SearchEye from "@/app/components/icons/searchEye";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className={styles["background-image"] + " h-[100svh]"}>
+      <div className={styles.content + " h-full"}>
+        <div className="h-[calc(100%-90px)] pt-[90px]">
+          <div className="flex flex-col w-[52%] h-full mx-auto my-auto align-middle">
+            <div className="my-auto text-center">
+              <h1 className="text-[84px] text-center text-white font-major-mono font-bold">
+                Dev-in.tw
+              </h1>
+              <div className="pt-[60px] text-center items-center w-full">
+                <form
+                  className={joinClassName(
+                    "w-full border-t-[5px] p-[1.3rem] h-[70px]",
+                    styles.form
+                  )}
+                >
+                  <input
+                    placeholder="搜尋可用子網域"
+                    className={joinClassName(
+                      "focus:outline-none bg-transparent flex-1",
+                      styles.input
+                    )}
+                  />
+                  <p className="text-gray-400 font-[400] text-[18px] font-roboto flex-none ml-[10px]">
+                    .dev-in.tw
+                  </p>
+                  <div className="flex-none ml-[20px] hover:cursor-pointer">
+                    <SearchEye
+                      // className={"h-[30px] w-[30px]"}
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className={joinClassName(
+            styles.scroll,
+            "h-[80px] hover:cursor-pointer"
+          )}
+        >
+          <ArrowDown />
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }
