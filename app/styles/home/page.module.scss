@@ -1,0 +1,136 @@
+.main {
+  position: relative;
+  background-image: url("/images/homeBackground.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100svh;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.8) 50%,
+      rgba(0, 0, 0, 1) 100%);
+}
+
+.content {
+  position: relative;
+  height: 100%;
+}
+
+.firstSection {
+  height: calc(100% - 5rem);
+  padding-top: 2rem;
+}
+
+.firstSectionFrame {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.firstSectionFrameSet {
+  margin: auto 0 auto 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 5.25rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  user-select: none;
+}
+
+.searchSection {
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.searchForm {
+  --signIn_width: 6rem;
+  --signIn_height: 2.5rem;
+  --signIn_bottomLeftTriangleSideLength: 1rem;
+  --signIn_topRightTriangleSideLength: 0.9rem;
+
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  box-shadow: 0px 0px 80px 24px rgba(255, 255, 255, 0.1);
+
+  padding: 1rem;
+  height: 2rem;
+  border-top: 0.25rem white solid;
+}
+
+.searchForm::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-width: 0 0 1rem 1rem;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+.searchInput {
+  background-color: transparent;
+  display: flex;
+  flex: 1 1 0%;
+  border: none;
+  color: white;
+  font-size: 1rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.searchSubTitle {
+  color: #9CA3Af;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  flex: none;
+  text-align: left;
+  margin-right: 1.25rem;
+  user-select: none;
+}
+
+.searchIcon {
+  flex: none;
+  height: 2rem;
+  width: 2rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.scrollSection {
+  display: flex;
+  padding-bottom: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  align-self: stretch;
+  height: 2rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
