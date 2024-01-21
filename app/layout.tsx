@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
+
+// Style
 import "@/app/styles/globals.scss";
 import "@/app/styles/reset.scss";
 
+// Component
+import Navbar from "@/app/components/navbar";
 
 export default function RootLayout({
   children,
@@ -11,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="zh-TW">
       <body>
-
+        <Navbar />
         {children}
       </body>
     </html>
