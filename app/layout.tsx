@@ -8,7 +8,7 @@ import "@/app/styles/reset.scss";
 import Navbar from "@/app/components/navbar";
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -22,9 +22,9 @@ export default function RootLayout({
   );
 }
 
-
 export const metadata: Metadata = {
-  title: 'Dev-in.tw',
-  description: 'Dev-in.tw是一個由HACO和OnCloud聯合構思的專案，打造一個給予台灣的開發者建立個人子網域的平台，提供 A、AAAA、CNAME、URI......等功能。',
-  applicationName: 'Dev-in.tw',
-}
+  title: "Dev-in.tw",
+  description:
+    "Dev-in.tw是一個由HACO和OnCloud聯合構思的專案，打造一個給予台灣的開發者建立個人子網域的平台，提供 A、AAAA、CNAME、URI......等功能。",
+  applicationName: "Dev-in.tw"
+};

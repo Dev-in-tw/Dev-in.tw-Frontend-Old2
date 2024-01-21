@@ -1,3 +1,12 @@
 {
-  "cSpell.words": ["tabler"]
+  "cSpell.words": [
+    "tabler"
+  ],
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "scss.format.braceStyle": "collapse",
+  "scss.format.newlineBetweenRules": false,
 }
