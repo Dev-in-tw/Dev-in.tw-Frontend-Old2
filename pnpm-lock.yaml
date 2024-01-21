@@ -98,7 +98,7 @@ packages:
       minimatch: 3.1.2
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
-    - supports-color
+      - supports-color
     dev: true
 
   /@eslint/js@8.56.0:
@@ -114,7 +114,7 @@ packages:
       debug: 4.3.4
       minimatch: 3.1.2
     transitivePeerDependencies:
-    - supports-color
+      - supports-color
     dev: true
 
   /@humanwhocodes/module-importer@1.0.1:
@@ -362,7 +362,7 @@ packages:
       ts-api-utils: 1.0.3(typescript@5.3.3)
       typescript: 5.3.3
     transitivePeerDependencies:
-    - supports-color
+      - supports-color
     dev: true
 
   /@typescript-eslint/parser@5.62.0(eslint@8.56.0)(typescript@5.3.3):
@@ -382,7 +382,7 @@ packages:
       eslint: 8.56.0
       typescript: 5.3.3
     transitivePeerDependencies:
-    - supports-color
+      - supports-color
     dev: true
 
   /@typescript-eslint/parser@6.19.0(eslint@8.56.0)(typescript@5.3.3):
@@ -403,7 +403,7 @@ packages:
       eslint: 8.56.0
       typescript: 5.3.3
     transitivePeerDependencies:
-    - supports-color
+      - supports-color
     dev: true
 
   /@typescript-eslint/scope-manager@5.62.0:
@@ -439,7 +439,7 @@ packages:
       ts-api-utils: 1.0.3(typescript@5.3.3)
       typescript: 5.3.3
     transitivePeerDependencies:
-    - supports-color
+      - supports-color
     dev: true
 
   /@typescript-eslint/types@5.62.0:
@@ -470,7 +470,7 @@ packages:
       tsutils: 3.21.0(typescript@5.3.3)
       typescript: 5.3.3
     transitivePeerDependencies:
-    - supports-color
+      - supports-color
     dev: true
 
   /@typescript-eslint/typescript-estree@6.19.0(typescript@5.3.3):
@@ -492,7 +492,7 @@ packages:
       ts-api-utils: 1.0.3(typescript@5.3.3)
       typescript: 5.3.3
     transitivePeerDependencies:
-    - supports-color
+      - supports-color
     dev: true
 
   /@typescript-eslint/utils@6.19.0(eslint@8.56.0)(typescript@5.3.3):
@@ -510,8 +510,8 @@ packages:
       eslint: 8.56.0
       semver: 7.5.4
     transitivePeerDependencies:
-    - supports-color
-    - typescript
+      - supports-color
+      - typescript
     dev: true
 
   /@typescript-eslint/visitor-keys@5.62.0:
@@ -1058,8 +1058,8 @@ packages:
       eslint-plugin-react-hooks: 4.6.0(eslint@8.56.0)
       typescript: 5.3.3
     transitivePeerDependencies:
-    - eslint-import-resolver-webpack
-    - supports-color
+      - eslint-import-resolver-webpack
+      - supports-color
     dev: true
 
   /eslint-import-resolver-node@0.3.9:
@@ -1069,11 +1069,11 @@ packages:
       is-core-module: 2.13.1
       resolve: 1.22.8
     transitivePeerDependencies:
-    - supports-color
+      - supports-color
     dev: true
 
-  ? /eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
-  : resolution: {integrity: sha512-xgdptdoi5W3niYeuQxKmzVDTATvLYqhpwmykwsh7f6HIOStGWEIL9iqZgQDF9u9OEzrRwR8no5q2VT+bjAujTg==}
+  /eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.56.0):
+    resolution: {integrity: sha512-xgdptdoi5W3niYeuQxKmzVDTATvLYqhpwmykwsh7f6HIOStGWEIL9iqZgQDF9u9OEzrRwR8no5q2VT+bjAujTg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       eslint: '*'
@@ -1089,14 +1089,14 @@ packages:
       is-core-module: 2.13.1
       is-glob: 4.0.3
     transitivePeerDependencies:
-    - '@typescript-eslint/parser'
-    - eslint-import-resolver-node
-    - eslint-import-resolver-webpack
-    - supports-color
+      - '@typescript-eslint/parser'
+      - eslint-import-resolver-node
+      - eslint-import-resolver-webpack
+      - supports-color
     dev: true
 
-  ? /eslint-module-utils@2.8.0(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
-  : resolution: {integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==}
+  /eslint-module-utils@2.8.0(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0):
+    resolution: {integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==}
     engines: {node: '>=4'}
     peerDependencies:
       '@typescript-eslint/parser': '*'
@@ -1122,7 +1122,7 @@ packages:
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
     transitivePeerDependencies:
-    - supports-color
+      - supports-color
     dev: true
 
   /eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0):
@@ -1155,9 +1155,9 @@ packages:
       semver: 6.3.1
       tsconfig-paths: 3.15.0
     transitivePeerDependencies:
-    - eslint-import-resolver-typescript
-    - eslint-import-resolver-webpack
-    - supports-color
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - supports-color
     dev: true
 
   /eslint-plugin-jsx-a11y@6.8.0(eslint@8.56.0):
@@ -1276,7 +1276,7 @@ packages:
       strip-ansi: 6.0.1
       text-table: 0.2.0
     transitivePeerDependencies:
-    - supports-color
+      - supports-color
     dev: true
 
   /espree@9.6.1:
@@ -2023,8 +2023,8 @@ packages:
       '@next/swc-win32-ia32-msvc': 14.1.0
       '@next/swc-win32-x64-msvc': 14.1.0
     transitivePeerDependencies:
-    - '@babel/core'
-    - babel-plugin-macros
+      - '@babel/core'
+      - babel-plugin-macros
     dev: false
 
   /normalize-path@3.0.0:
@@ -2251,7 +2251,7 @@ packages:
       typescript: 5.3.3
       vue-eslint-parser: 9.4.0(eslint@8.56.0)
     transitivePeerDependencies:
-    - supports-color
+      - supports-color
     dev: true
 
   /prettier@2.8.8:
@@ -2750,6 +2750,29 @@ packages:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
       punycode: 2.3.1
+    dev: true
+
+  /uuid@8.3.2:
+    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
+    dev: false
+
+  /vue-eslint-parser@9.4.0(eslint@8.56.0):
+    resolution: {integrity: sha512-7KsNBb6gHFA75BtneJsoK/dbZ281whUIwFYdQxA68QrCrGMXYzUMbPDHGcOQ0OocIVKrWSKWXZ4mL7tonCXoUw==}
+    engines: {node: ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: '>=6.0.0'
+    dependencies:
+      debug: 4.3.4
+      eslint: 8.56.0
+      eslint-scope: 7.2.2
+      eslint-visitor-keys: 3.4.3
+      espree: 9.6.1
+      esquery: 1.5.0
+      lodash: 4.17.21
+      semver: 7.5.4
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /which-boxed-primitive@1.0.2:
