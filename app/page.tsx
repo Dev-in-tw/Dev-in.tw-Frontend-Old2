@@ -10,7 +10,7 @@ import joinClassName from "@/app/lib/joinClassName";
 // Font
 const major_mono_display = Major_Mono_Display({
   weight: "400",
-  subsets: ["latin"]
+  subsets: ["latin"],
 });
 
 // Icon
