@@ -10,7 +10,7 @@ import joinClassName from "@/app/lib/joinClassName";
 // Font
 const major_mono_display = Major_Mono_Display({
   weight: "400",
-  subsets: ["latin"],
+  subsets: ["latin"]
 });
 
 // Icon
@@ -21,23 +21,21 @@ export default function Home() {
     <div className={styles.main}>
       <div className={styles.searchPage}>
         <div className={styles.center}>
-          <div>
-            <h1
-              className={joinClassName(
-                styles.title,
-                major_mono_display.className
-              )}
-            >
-              Dev-in.tw
-            </h1>
-            <form className={styles.searchForm}>
-              <input placeholder="搜尋可用子網域" />
-              <p>.dev-in.tw</p>
-              <div>
-                <IconSearch color="white" />
-              </div>
-            </form>
-          </div>
+          <h1
+            className={joinClassName(
+              styles.title,
+              major_mono_display.className
+            )}
+          >
+            Dev-in.tw
+          </h1>
+          <form className={styles.searchForm}>
+            <input placeholder="搜尋可用子網域" />
+            <p>.dev-in.tw</p>
+            <div>
+              <IconSearch color="white" />
+            </div>
+          </form>
         </div>
         <div className={styles.scrollIcon}>
           <IconChevronsDown color="white" />
