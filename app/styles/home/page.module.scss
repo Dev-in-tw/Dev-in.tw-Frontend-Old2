@@ -7,9 +7,9 @@
   overflow-y: scroll;
   // scroll-snap-type: y mandatory;
 
-  >div {
+  // >div {
     // scroll-snap-align: start;
-  }
+  // }
 
   &::before {
     content: "";
