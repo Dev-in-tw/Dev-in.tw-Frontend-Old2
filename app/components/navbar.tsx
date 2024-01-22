@@ -17,7 +17,10 @@ export default function Navbar() {
         <Image src="/images/logo.png" height={45} width={45} alt="logo" />
       </Link>
       <div className={styles.frame}>
-        <button className={styles.signInButton} onClick={() => signIn("discord")}>
+        <button
+          className={styles.signInButton}
+          onClick={() => signIn("discord")}
+        >
           <p className={styles.signInButtonText}>登入 / 註冊</p>
         </button>
         <button className={styles.plusButton}>
@@ -32,6 +35,6 @@ export default function Navbar() {
           </svg>
         </button>
       </div>
-    </div >
+    </div>
   );
 }
