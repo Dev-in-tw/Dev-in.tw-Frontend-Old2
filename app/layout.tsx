@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-
 // Style
 import "@/app/styles/globals.scss";
 import "@/app/styles/reset.scss";
@@ -7,8 +5,11 @@ import "@/app/styles/reset.scss";
 // Component
 import Navbar from "@/app/components/navbar";
 
+// Module
+import type { Metadata } from "next";
+
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -26,5 +27,5 @@ export const metadata: Metadata = {
   title: "Dev-in.tw",
   description:
     "Dev-in.tw是一個由HACO和OnCloud聯合構思的專案，打造一個給予台灣的開發者建立個人子網域的平台，提供 A、AAAA、CNAME、URI......等功能。",
-  applicationName: "Dev-in.tw"
+  applicationName: "Dev-in.tw",
 };

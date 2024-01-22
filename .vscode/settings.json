@@ -1,7 +1,5 @@
 {
-  "cSpell.words": [
-    "tabler"
-  ],
+  "cSpell.words": ["tabler"],
   "editor.tabSize": 2,
   "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
   "[typescriptreact]": {
@@ -9,4 +7,7 @@
   },
   "scss.format.braceStyle": "collapse",
   "scss.format.newlineBetweenRules": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  }
 }
