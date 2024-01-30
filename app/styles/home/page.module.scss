@@ -8,7 +8,7 @@
   // scroll-snap-type: y mandatory;
 
   // >div {
-    // scroll-snap-align: start;
+  // scroll-snap-align: start;
   // }
 
   &::before {
@@ -47,10 +47,23 @@
     color: white;
     text-align: center;
     user-select: none;
+    @media screen and (max-width: 810px) {
+      display: none;
+    }
+  }
+
+  .title_phone {
+    font-size: 6.25rem;
+    color: white;
+    text-align: center;
+    user-select: none;
+    @media screen and (min-width: 810px) {
+      display: none;
+    }
   }
 
   .searchForm {
-    $fontSize: 1.4rem;
+    $fontSize: 1rem;
     $fontWeight: 400;
 
     display: flex;
@@ -94,8 +107,8 @@
 
     >div {
       svg {
-        height: 2rem;
-        width: 2rem;
+        height: 1.75rem;
+        width: 1.75rem;
       }
 
       &:hover {

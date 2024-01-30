@@ -29,6 +29,14 @@ export default function Home() {
           >
             Dev-in.tw
           </h1>
+          <h1
+            className={joinClassName(
+              styles.title_phone,
+              major_mono_display.className
+            )}
+          >
+            DIT
+          </h1>
           <form className={styles.searchForm}>
             <input placeholder="搜尋可用子網域" />
             <p>.dev-in.tw</p>
