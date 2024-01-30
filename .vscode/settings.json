@@ -9,5 +9,6 @@
   "scss.format.newlineBetweenRules": false,
   "[typescript]": {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
-  }
+  },
+  "deepscan.enable": true
 }
