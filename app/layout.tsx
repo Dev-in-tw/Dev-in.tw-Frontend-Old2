@@ -1,6 +1,7 @@
 // Style
 import "@/app/styles/globals.scss";
 import "@/app/styles/reset.scss";
+import styles from "@/app/styles/layout.module.scss";
 
 // Component
 import Navbar from "@/app/components/navbar";
@@ -18,6 +19,10 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <div className={styles.menuOverlay} style={{display: "none"}}></div>
+        <div className={styles.menuFrame} style={{display: "none"}}>
+        Menu Content
+        </div>
       </body>
     </html>
   );
