@@ -9,32 +9,57 @@ import styles from "@/app/styles/navbar.module.scss";
 
 // module
 import { signIn } from "next-auth/react";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div className={styles.main}>
-      <Link href="/" className={styles.logo}>
-        <Image src="/images/logo.png" height={45} width={45} alt="logo" />
-      </Link>
-      <div className={styles.frame}>
-        <button
-          className={styles.signInButton}
-          onClick={() => signIn("discord")}
-        >
-          <p className={styles.signInButtonText}>登入 / 註冊</p>
-        </button>
-        <button className={styles.plusButton}>
-          <svg
-            viewBox="0 0 30 30"
-            xmlns="http://www.w3.org/2000/svg"
-            className={styles.plusIcon}
+    <>
+      <div className={styles.main}>
+        <Link href="/" className={styles.logo}>
+          <Image src="/images/logo.png" height={45} width={45} alt="logo" />
+        </Link>
+        <div className={styles.frame}>
+          <button
+            className={styles.signInButton}
+            onClick={() => signIn("discord")}
           >
-            <g mask="url(#mask0_21_345)">
-              <path d="M13.75 23.75V16.25H6.25V13.75H13.75V6.25H16.25V13.75H23.75V16.25H16.25V23.75H13.75Z" />
-            </g>
-          </svg>
-        </button>
+            <p className={styles.signInButtonText}>登入 / 註冊</p>
+          </button>
+          <button
+            className={styles.plusButton}
+            onClick={() => {
+              setMenuOpen(!menuOpen);
+            }}
+          >
+            <svg
+              viewBox="0 0 30 30"
+              xmlns="http://www.w3.org/2000/svg"
+              className={styles.plusIcon}
+            >
+              <g mask="url(#mask0_21_345)">
+                <path d="M13.75 23.75V16.25H6.25V13.75H13.75V6.25H16.25V13.75H23.75V16.25H16.25V23.75H13.75Z" />
+              </g>
+            </svg>
+          </button>
+        </div>
       </div>
-    </div>
+      <div
+        className={styles.menuOverlay}
+        style={{
+          display: menuOpen ? "" : "none",
+        }}
+      ></div>
+      <div
+        className={styles.menuFrame}
+        style={{
+          transform: menuOpen ? "" : "scaleY(0)",
+        }}
+      >
+        Menu Content
+        <button onClick={() => setMenuOpen(!menuOpen)}>Close</button>
+      </div>
+    </>
   );
 }
