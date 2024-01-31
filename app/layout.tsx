@@ -8,6 +8,7 @@ import Navbar from "@/app/components/navbar";
 
 // Module
 import type { Metadata } from "next";
+import type { Viewport } from "next";
 
 export default function RootLayout({
   children,
@@ -27,6 +28,15 @@ export default function RootLayout({
     </html>
   );
 }
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: "black",
+  colorScheme: "dark",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://beta.dev-in.tw"),
@@ -50,9 +60,6 @@ export const metadata: Metadata = {
     "Taiwan",
   ],
   referrer: "origin",
-  themeColor: "#000000",
-  colorScheme: "dark",
-  viewport: { width: "device-width", initialScale: 1 },
   creator: "LAZCO STUDIO LTD",
   publisher: "LAZCO STUDIO LTD",
   robots: "index, follow",
