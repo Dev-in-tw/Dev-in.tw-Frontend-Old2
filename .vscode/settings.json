@@ -10,5 +10,8 @@
   "[typescript]": {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   },
-  "deepscan.enable": true
+  "deepscan.enable": true,
+  "[scss]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  }
 }
