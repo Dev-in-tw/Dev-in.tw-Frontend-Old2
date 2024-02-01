@@ -1,19 +1,23 @@
 .main {
   -webkit-backdrop-filter: blur(20px) brightness(100%);
   backdrop-filter: blur(20px) brightness(100%);
-  background: radial-gradient(50% 50% at 50% 50%, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgb(0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-color: #1e1e1e;
   box-shadow: 0px 0px 50px 10px #000000;
   height: 5.25rem;
   box-sizing: border-box;
-  padding: 0px 20px 0px 30px;
+  padding: 0px 1.3rem 0px 1.9rem;
   position: fixed;
   width: 100svw;
   top: 0;
   user-select: none;
-  z-index: 9999;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,7 +61,8 @@
   left: 0;
   width: 0;
   height: 0;
-  border-width: 0 var(--signIn_bottomLeftTriangleSideLength) var(--signIn_bottomLeftTriangleSideLength) 0;
+  border-width: 0 var(--signIn_bottomLeftTriangleSideLength)
+    var(--signIn_bottomLeftTriangleSideLength) 0;
   border-style: solid;
   border-color: transparent transparent white transparent;
   transition-timing-function: ease-in-out;
@@ -69,8 +74,12 @@
   content: "";
   top: 0;
   right: 0;
-  width: calc(var(--signIn_topRightTriangleSideLength) * 1.4142135623730950488016887242097);
-  height: calc(var(--signIn_topRightTriangleSideLength) * 1.4142135623730950488016887242097);
+  width: calc(
+    var(--signIn_topRightTriangleSideLength) * 1.4142135623730950488016887242097
+  );
+  height: calc(
+    var(--signIn_topRightTriangleSideLength) * 1.4142135623730950488016887242097
+  );
   outline: 1px solid white;
   transform: translate(50%, -50%) rotate(45deg);
   transition-timing-function: ease-in-out;
@@ -82,15 +91,22 @@
 }
 
 .signInButton:hover::before {
-  --signIn_bottomLeftTriangleSideLength: calc(var(--signIn_width) + var(--signIn_height) - var(--signIn_topRightTriangleSideLength) + (var(--signIn_topRightTriangleSideLength) * 0.3));
+  --signIn_bottomLeftTriangleSideLength: calc(
+    var(--signIn_width) + var(--signIn_height) -
+      var(--signIn_topRightTriangleSideLength) +
+      (var(--signIn_topRightTriangleSideLength) * 0.3)
+  );
 }
 
 .signInButton:hover::after {
-  transform: translate(calc(50% + var(--signIn_topRightTriangleSideLength) * 0.1),
-      calc((50% + var(--signIn_topRightTriangleSideLength) * 0.1) * -1)) rotate(45deg);
+  transform: translate(
+      calc(50% + var(--signIn_topRightTriangleSideLength) * 0.1),
+      calc((50% + var(--signIn_topRightTriangleSideLength) * 0.1) * -1)
+    )
+    rotate(45deg);
 }
 
-.signInButton:hover>.signInButtonText {
+.signInButton:hover > .signInButtonText {
   color: black;
 }
 
@@ -109,10 +125,7 @@
 /* Plus Button */
 
 .plusButton {
-  /* Config */
   --plus_sideLength: 2.5rem;
-  --plus_topRightTriangleSideLength: 0.9rem;
-  /* Config end */
   position: relative;
   display: flex;
   justify-content: center;
@@ -122,31 +135,60 @@
   height: var(--plus_sideLength);
   background-color: #000000;
   overflow: hidden;
-}
-
-.plusButton::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-width: 0 var(--plus_topRightTriangleSideLength) var(--plus_topRightTriangleSideLength) 0;
-  border-style: solid;
-  border-color: transparent white transparent transparent;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
+  z-index: 9999;
 }
 
 .plusButton:hover {
   cursor: pointer;
 }
 
-.plusButton:hover::before {
-  --plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+.plusButtonRightTopTriangle {
+  /* Config */
+  --plusRightTopTriangleSideLength: 0.9rem;
+  /* Config end */
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-width: 0 var(--plusRightTopTriangleSideLength)
+    var(--plusRightTopTriangleSideLength) 0;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+  transform-origin: center;
+  transition-timing-function: ease-in-out;
+  // transition-duration: 0.2s;
+  transition: border-width 0.2s;
 }
 
-.plusButton>.plusIcon {
+.plusButton:hover .plusButtonRightTopTriangle {
+  --plusRightTopTriangleSideLength: calc(var(--plus_sideLength) * 2);
+}
+
+.plusButtonLeftBottomTriangle {
+  /* Config */
+  --plusBottomLeftTriangleSideLength: 0.9rem;
+  /* Config end */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-width: 0 var(--plusBottomLeftTriangleSideLength)
+    var(--plusBottomLeftTriangleSideLength) 0;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+  transform-origin: center;
+  transition-timing-function: ease-in-out;
+  // transition-duration: 0.2s;
+  transition: border-width 0.2s;
+}
+
+.plusButton:hover .plusButtonLeftBottomTriangle {
+  --plusBottomLeftTriangleSideLength: calc(var(--plus_sideLength) * 2);
+}
+
+.plusButton > .plusIcon {
   fill: white;
   width: calc(var(--plus_sideLength) * 0.7);
   height: calc(var(--plus_sideLength) * 0.7);
@@ -155,33 +197,95 @@
   transition-duration: 0.2s;
 }
 
-.plusButton:hover>.plusIcon {
+.plusButton:hover > .plusIcon {
   fill: black;
   transform: rotate(-180deg);
 }
 
 .menuOverlay {
-  opacity: 0.8;
-  background-color: black;
   position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  z-index: 99999999;
-}
-
-.menuFrame {
-  position: fixed;
-  background-color: black;
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 35%;
-  z-index: 99999999999;
-  opacity: 1.0;
-  border-bottom: 0.25rem solid white;
+  height: 100vh;
+  z-index: 999;
+  transition-delay: transform 0.5s;
+  transition: all 0.5s ease-in-out;
 
-  transition: all .5s ease-in-out;
-  transform-origin: left top;
+  .menuFrame {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    border-bottom: 0.25rem solid white;
+    padding: 1.3rem;
+    box-sizing: border-box;
+
+    transition: all 0.5s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9998;
+  }
 }
+
+/* Close Button */
+
+// .closeButton {
+//   /* Config */
+//   --close_sideLength: 2.5rem;
+//   --close_topRightTriangleSideLength: 0.9rem;
+//   /* Config end */
+//   position: fixed;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   border: 1px solid white;
+//   width: var(--close_sideLength);
+//   height: var(--close_sideLength);
+//   background-color: #000000;
+//   overflow: hidden;
+//   top: 1rem;
+//   right: 1rem;
+// }
+
+// .closeButton::before {
+//   position: absolute;
+//   content: "";
+//   top: 0;
+//   right: 0;
+//   width: 0;
+//   height: 0;
+//   border-width: 0 var(--close_topRightTriangleSideLength) var(--close_topRightTriangleSideLength) 0;
+//   border-style: solid;
+//   border-color: transparent white transparent transparent;
+//   transition-timing-function: ease-in-out;
+//   transition-duration: 0.2s;
+// }
+
+// .closeButton:hover {
+//   cursor: pointer;
+// }
+
+// .closeButton:hover::before {
+//   --close_topRightTriangleSideLength: calc(var(--close_sideLength) * 2);
+// }
+
+// .closeButton>.closeIcon {
+//   fill: white;
+//   width: calc(var(--close_sideLength) * 0.7);
+//   height: calc(var(--close_sideLength) * 0.7);
+//   z-index: 1;
+//   transition-timing-function: ease-in-out;
+//   transition-duration: 0.2s;
+//   transform: rotate(-45deg);
+// }
+
+// .closeButton:hover>.closeIcon {
+//   fill: black;
+//   transform: rotate(45deg);
+// }
