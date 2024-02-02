@@ -3,13 +3,14 @@
 // Module
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 // Style
 import styles from "@/app/styles/navbar.module.scss";
 
-// module
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+// Component
+import Menu from "@/app/components/menu";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -87,7 +88,7 @@ export default function Navbar() {
               }}
               onClick={event => event.stopPropagation()}
             >
-              Menu Content
+              <Menu />
             </div>
           </div>
         </div>

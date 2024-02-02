@@ -1,0 +1,70 @@
+.frame {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+
+  @media screen and (max-width: 290px) {
+    display: none;
+  }
+
+  .logoFrame {
+    display: flex;
+    flex-direction: column;
+
+    .logoImage {
+      flex: inherit;
+    }
+  }
+}
+
+.list {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5rem;
+}
+
+.listFrame {
+  display: flex;
+  flex-direction: column;
+
+  .listItemFrame {
+    display: flex;
+    border-width: 0 0.25rem 0 0;
+    border-style: solid;
+    border-color: white;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    background-color: transparent;
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+
+    &:hover {
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .listItemIcon {
+      padding-right: 1.5rem;
+      @media screen and (max-width: 390px) {
+        display: none;
+      }
+    }
+
+    .listItem {
+      padding-right: 0.5rem;
+      @media screen and (max-width: 390px) {
+        padding-right: 1rem;
+      }
+    }
+  }
+}
