@@ -31,7 +31,7 @@ export async function GET(
         Authorization: `Bearer ${access_token}`,
       },
     });
-    const data = await github_user_response.json();
+    const data1 = await github_user_response.json();
 
     const github_email_response = await fetch(
       "https://api.github.com/user/emails",
@@ -47,7 +47,7 @@ export async function GET(
       code: code,
       access_token: access_token,
       emails: emails,
-      data: data,
+      data: data1,
     });
   }
 }
