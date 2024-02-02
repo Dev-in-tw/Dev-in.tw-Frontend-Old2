@@ -7,6 +7,7 @@ export async function GET(
   if (params.service === "github") {
     const searchParams = request.nextUrl.searchParams;
     const code = searchParams.get("code");
+
     const github_response = await fetch(
       "https://github.com/login/oauth/access_token",
       {
@@ -23,6 +24,18 @@ export async function GET(
       }
     );
     const { access_token } = await github_response.json();
-    return Response.json({ code: code, access_token: access_token});
+
+    const github_user_response = await fetch("https://api.github.com/user", {
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+      },
+    });
+    const userData = await github_user_response.json();
+
+    return Response.json({
+      code: code,
+      access_token: access_token,
+      userData: userData,
+    });
   }
 }
