@@ -19,6 +19,7 @@ export async function GET(
         body: JSON.stringify({
           client_id: process.env.GITHUB_CLIENT_ID,
           client_secret: process.env.GITHUB_CLIENT_SECRET,
+          scope: "user:email",
           code,
         }),
       }
@@ -32,9 +33,20 @@ export async function GET(
     });
     const userData = await github_user_response.json();
 
+    const github_email_response = await fetch(
+      "https://api.github.com/user/emails",
+      {
+        headers: {
+          Authorization: `Bearer ${access_token}`,
+        },
+      }
+    );
+    const emails = await github_email_response.json();
+
     return Response.json({
       code: code,
       access_token: access_token,
+      emails: emails,
       userData: userData,
     });
   }
