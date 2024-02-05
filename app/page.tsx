@@ -7,8 +7,6 @@ import { Major_Mono_Display } from "next/font/google";
 // Lib
 import joinClassName from "@/app/lib/joinClassName";
 
-// Component
-
 // Font
 const major_mono_display = Major_Mono_Display({
   weight: "400",
@@ -16,7 +14,12 @@ const major_mono_display = Major_Mono_Display({
 });
 
 // Icon
-import { IconSearch, IconChevronsDown } from "@tabler/icons-react";
+import {
+  IconSearch,
+  IconChevronsDown,
+  IconBrandDiscordFilled,
+} from "@tabler/icons-react";
+import Link from "next/link";
 
 export default function Home() {
   function searchFormHandle(e: React.FormEvent<HTMLFormElement>) {
@@ -65,8 +68,25 @@ export default function Home() {
           <IconChevronsDown color="white" />
         </div>
       </div>
-      <div className={styles.frame1}></div>
-      <div className={styles.frame2}></div>
+      {/* <div className={styles.frame1}></div> */}
+      <div className={styles.frame2}>
+        <div className={styles.helpFrame}>
+          <h1 className={styles.helpTitle}>需要協助嗎</h1>
+          <p className={styles.helpDescription}>我們隨時提供為您提供幫助</p>
+          <div className={styles.joinDiscordFrame}>
+            <Link
+              className={styles.joinDiscordButton}
+              href="https://discord.gg/ZvwTZqXjYf"
+              target="_blank"
+            >
+              <p className={styles.joinDiscordButtonText}>
+                <IconBrandDiscordFilled />
+                Discord
+              </p>
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

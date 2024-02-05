@@ -12,6 +12,7 @@
   // }
 
   &::before {
+    height: 100%;
     content: "";
     position: absolute;
     top: 0;
@@ -156,4 +157,121 @@
 
 .frame2 {
   height: calc(100dvh - 5.25rem);
+  background-color: rgba(0, 0, 0, 0.7);
+
+  .helpFrame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .helpTitle {
+      font-size: 6rem;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      user-select: none;
+
+      @media screen and (max-width: 555px) {
+        font-size: 5rem;
+      }
+      @media screen and (max-width: 500px) {
+        font-size: 4rem;
+      }
+      @media screen and (max-width: 380px) {
+        font-size: 3rem;
+      }
+    }
+
+    .helpDescription {
+      padding-top: 2rem;
+      font-size: 2rem;
+      color: white;
+      text-align: center;
+      user-select: none;
+
+      @media screen and (max-width: 555px) {
+        font-size: 1.75rem;
+      }
+      @media screen and (max-width: 500px) {
+        font-size: 1.5rem;
+      }
+      @media screen and (max-width: 380px) {
+        font-size: 1.25rem;
+      }
+    }
+
+    .joinDiscordFrame {
+      padding-top: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Join Discord Button */
+
+    .joinDiscordButton {
+      /* Config */
+      --joinDiscord_width: 8rem;
+      --joinDiscord_height: 3rem;
+      --joinDiscord_bottomLeftTriangleSideLength: 1rem;
+      --joinDiscord_topRightTriangleSideLength: 0.9rem;
+      /* Config end */
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid white;
+      width: 8rem;
+      height: 3rem;
+      background-color: #000000;
+      overflow: hidden;
+    }
+
+    .joinDiscordButton::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-width: 0 0 var(--joinDiscord_bottomLeftTriangleSideLength)
+        var(--joinDiscord_bottomLeftTriangleSideLength);
+      border-style: solid;
+      border-color: transparent transparent white transparent;
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.2s;
+    }
+
+    .joinDiscordButton:hover {
+      cursor: pointer;
+    }
+
+    .joinDiscordButton:hover::before {
+      --joinDiscord_bottomLeftTriangleSideLength: calc(
+        var(--joinDiscord_width) + var(--joinDiscord_height)
+      );
+    }
+
+    .joinDiscordButton:hover > .joinDiscordButtonText {
+      color: black;
+    }
+
+    .joinDiscordButtonText {
+      display: flex;
+      width: auto;
+      margin: auto 0;
+      color: white;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-weight: 700;
+      text-align: center;
+      z-index: 1;
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.2s;
+      align-items: center;
+      gap: 0.25rem;
+    }
+  }
 }
