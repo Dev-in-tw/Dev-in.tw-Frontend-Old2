@@ -5,6 +5,7 @@ import styles from "@/app/styles/layout.module.scss";
 
 // Component
 import Navbar from "@/app/components/navbar";
+import PathCheck from "@/app/components/pathCheck";
 
 // Module
 import type { Metadata } from "next";
@@ -19,7 +20,7 @@ export default function RootLayout({
     <html lang="zh-TW">
       <body>
         <Navbar />
-        <div className={styles.main}>{children}</div>
+        <PathCheck>{children}</PathCheck>
       </body>
     </html>
   );
