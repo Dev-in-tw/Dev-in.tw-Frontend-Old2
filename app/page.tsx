@@ -1,3 +1,5 @@
+"use client";
+
 // Style
 import styles from "@/app/styles/home/page.module.scss";
 import { Major_Mono_Display } from "next/font/google";
@@ -10,13 +12,24 @@ import joinClassName from "@/app/lib/joinClassName";
 // Font
 const major_mono_display = Major_Mono_Display({
   weight: "400",
-  subsets: ["latin"]
+  subsets: ["latin"],
 });
 
 // Icon
 import { IconSearch, IconChevronsDown } from "@tabler/icons-react";
 
 export default function Home() {
+  function searchFormHandle(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const input = e.currentTarget.querySelector("input");
+    if (input) {
+      const value = input.value;
+      if (value) {
+        window.location.href = `/find?sub=${value}`;
+      }
+    }
+  }
+
   return (
     <div className={styles.main}>
       <div className={styles.searchPage}>
@@ -37,7 +50,10 @@ export default function Home() {
           >
             DIT
           </h1>
-          <form className={styles.searchForm}>
+          <form
+            className={styles.searchForm}
+            onSubmit={e => searchFormHandle(e)}
+          >
             <input placeholder="搜尋可用子網域" />
             <p>.dev-in.tw</p>
             <div>
