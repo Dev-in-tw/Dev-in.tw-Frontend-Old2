@@ -13,12 +13,13 @@ export default function PathCheck({
   return (
     <div
       className={styles.main}
-      style={{
-        display: pathname !== "/" ? "relative" : "",
-        overflowY: pathname !== "/" ? "scroll" : "hidden",
-      }}
+      // style={{
+      //   display: pathname !== "/" ? "relative" : "",
+      //   overflowY: pathname !== "/" ? "scroll" : "hidden",
+      // }}
     >
-      {children}
+      <div className={styles.fakeNavbar} />
+      <div className={styles.content}>{children}</div>
     </div>
   );
 }

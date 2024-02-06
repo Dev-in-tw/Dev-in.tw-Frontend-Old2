@@ -1,7 +1,6 @@
 // Style
 import "@/app/styles/globals.scss";
 import "@/app/styles/reset.scss";
-import styles from "@/app/styles/layout.module.scss";
 
 // Component
 import Navbar from "@/app/components/navbar";
@@ -19,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="zh-TW">
       <body>
-        <Navbar />
+        {/* <Navbar /> */}
         <PathCheck>{children}</PathCheck>
       </body>
     </html>
