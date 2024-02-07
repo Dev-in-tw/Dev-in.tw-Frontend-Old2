@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="zh-TW">
       <body>
-        {/* <Navbar /> */}
+        <Navbar />
         <PathCheck>{children}</PathCheck>
       </body>
     </html>
